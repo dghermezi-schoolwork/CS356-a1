@@ -1,5 +1,5 @@
 
-public class MultipleChoiceQuestion implements Question {
+public class SingleChoiceQuestion implements Question {
 
 	@Override
 	public String getQuestion() {
