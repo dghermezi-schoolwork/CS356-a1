@@ -1,16 +1,5 @@
 
-public class SingleChoiceQuestion implements Question {
+public class SingleChoiceQuestion extends Question {
 
-	@Override
-	public String getQuestion() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String[] getAnswers() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	
 }

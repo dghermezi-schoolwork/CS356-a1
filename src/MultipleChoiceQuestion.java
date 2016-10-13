@@ -1,16 +1,6 @@
 
-public class MultipleChoiceQuestion implements Question {
+public class MultipleChoiceQuestion extends Question {
 
-	@Override
-	public String getQuestion() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
-	@Override
-	public String[] getAnswers() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }
