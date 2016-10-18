@@ -20,18 +20,11 @@ public class SimulationDriver {
 			students[i] = new Student(new BigInteger(130, rand).toString(32));
 		}
 
-		//
-		// Student student1 = new Student("10");
-		// Student student2 = new Student("Dghermezi");
-		//
 		Question question = new MultipleChoiceQuestion();
 		question.setQuestionText("What is 2+2?");
 		question.setAnswerText(new String[] { "1", "2", "3", "4", "5" });
 		((MultipleChoiceQuestion) question).setAnswer(new int[] { 0, 0, 0, 1, 0 });
 		iVoteService.setQuestion(question, 5000);
-		// Thread t = new Thread(new Wait(iVoteService.getWaitTime()));
-		// t.start();
-
 		int[] tempAnswer = new int[question.getAnswerText().length];
 		for (int i = 0; i < students.length; i++) {
 
@@ -45,23 +38,13 @@ public class SimulationDriver {
 			iVoteService.enterAnswer(students[i]);
 		}
 
-		// student1.setAnswer(new int[] { 0, 0, 1, 0, 0 });
-		// student2.setAnswer(new int[] { 0, 0, 0, 0, 1 });
-		// iVoteService.enterAnswer(student1);
-		// iVoteService.enterAnswer(student2);
-		// student1.setAnswer(new int[] { 0, 0, 0, 1, 0 });
-		// iVoteService.enterAnswer(student1);
-		//
-		// t.join();
 		iVoteService.stats(question);
-		//
+
 		question = new SingleChoiceQuestion();
 		question.setQuestionText("True or False?");
 		question.setAnswerText(new String[] { "True", "False" });
 		((SingleChoiceQuestion) question).setAnswer(0);
 		iVoteService.setQuestion(question, 10000);
-		// t = new Thread(new Wait(iVoteService.getWaitTime()));
-		// t.start();
 
 		tempAnswer = new int[question.getAnswerText().length];
 		for (int i = 0; i < students.length; i++) {
